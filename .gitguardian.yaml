@@ -1,0 +1,25 @@
+# GitGuardian configuration (ggshield + dashboard)
+# Docs: https://docs.gitguardian.com/ggshield-docs/reference/configuration
+
+secret:
+  # Paths to exclude from secret scanning (globs relative to repo root).
+  ignored_paths:
+    - 'dist/**'
+    - '**/*.zip'
+    - '**/*.png'
+    - '**/*.jpg'
+    - '**/*.jpeg'
+    - '**/*.gif'
+    - '**/*.ico'
+    - '**/*.pyc'
+    - '**/__pycache__/**'
+    - '.pytest_cache/**'
+    - 'plugin.audio.resonance/resources/lib/deps/spotty/**'
+    - '**/spotty'
+    - '**/spotty-*'
+
+# Minimum severity to report (low|medium|high|critical). Default: low
+# min_severity: low
+
+# Exit code on secrets found (used by CI). Default: 1
+# exit_code: 1

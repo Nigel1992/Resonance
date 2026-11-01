@@ -1,0 +1,9 @@
+# Pre-commit hooks: block commits containing secrets.
+# Install: pip install pre-commit && pre-commit install
+repos:
+  - repo: https://github.com/GitGuardian/ggshield
+    rev: v1.34.0
+    hooks:
+      - id: ggshield
+        language_version: python3
+        stages: [pre-commit]
